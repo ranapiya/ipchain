@@ -1,8 +1,9 @@
 "use client";
 import * as React from "react";
-import { Button, ButtonProps } from "./button";
+import { Button } from "./button";
 import { Check, Copy } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ButtonProps } from "./button copy";
 
 interface CopyButtonProps extends ButtonProps {
   text: string;

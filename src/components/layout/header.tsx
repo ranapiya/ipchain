@@ -1,9 +1,9 @@
 "use client"
-
+import { ConnectWallet } from "@/modules/wallet"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { ChevronDown, Wallet, User } from "lucide-react"
+import {  User } from "lucide-react"
 
 export function Header() {
   return (
@@ -25,24 +25,10 @@ export function Header() {
         {/* Right side actions */}
         <div className="flex items-center gap-3">
           {/* Chain Selector */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="sm" className="hidden sm:flex bg-transparent">
-                Testnet
-                <ChevronDown className="ml-1 h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem>Testnet</DropdownMenuItem>
-              <DropdownMenuItem>Mainnet</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          
 
           {/* Connect Wallet Button */}
-          <Button className="bg-primary hover:bg-primary/90">
-            <Wallet className="mr-2 h-4 w-4" />
-            Connect Wallet
-          </Button>
+          <ConnectWallet />
 
           {/* User Menu */}
           <DropdownMenu>

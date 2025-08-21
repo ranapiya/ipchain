@@ -33,7 +33,7 @@ const Connected: FC<ConnectedProps> = (props) => {
         >
           <div className="flex items-center">
             <Image
-              src={config?.iconUrls?.sm ?? ""}
+              src={config?.iconUrls?.sm ?? "/fallback-icon.png"}
               className="w-5"
               alt="icon"
               width={100}
@@ -41,9 +41,12 @@ const Connected: FC<ConnectedProps> = (props) => {
             />
             <span className="text-md ml-2">{truncatedAddress}</span>
             <Badge
-              className={`ml-2 text-white uppercase ${config?.chainType === "mainnet" ? "bg-green-500" : "bg-purple-500"}`}
+              className={`ml-2 text-white uppercase px-2 py-0.5 text-xs ${
+                config?.chainType === "mainnet"
+                  ? "bg-green-500"
+                  : "bg-purple-500"
+              }`}
               variant={"default"}
-              size={"sm"}
             >
               {config?.chainType}
             </Badge>
@@ -66,16 +69,19 @@ const Connected: FC<ConnectedProps> = (props) => {
             {config?.chainName ?? config?.chainId}
           </span>
           <Badge
-            className={`text-white uppercase ${config?.chainType === "mainnet" ? "bg-green-500" : "bg-purple-500"}`}
-            variant={"default"}
-            size={"sm"}
-          >
-            {config?.chainType}
-          </Badge>
+              className={`ml-2 text-white uppercase px-2 py-0.5 text-xs ${
+                config?.chainType === "mainnet"
+                  ? "bg-green-500"
+                  : "bg-purple-500"
+              }`}
+              variant={"default"}
+            >
+              {config?.chainType}
+            </Badge>
         </div>
         <div className="flex flex-row items-center mb-2 gap-2">
           <Input
-            value={account?.address ?? ""}
+            value={account?.address ?? "/fallback-icon.png"}
             className="p-2 text-sm rounded w-full"
             readOnly
             autoFocus={false}
@@ -99,7 +105,7 @@ const Connected: FC<ConnectedProps> = (props) => {
             <a
               href={config?.blockExplorerAddressPages[0]?.replaceAll(
                 "${address}",
-                account?.address ?? "",
+                account?.address ?? ""
               )}
               target="_blank"
             >
