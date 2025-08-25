@@ -21,12 +21,9 @@ import { usePathname } from "next/navigation"
 const sidebarItems = [
   { icon: LayoutDashboard, label: "Dashboard", href: "/" },
   { icon: Plus, label: "New IP", href: "/new-ip" },
-  { icon: Coins, label: "Fractionalize", href: "/fractionalize" },
-  { icon: TrendingUp, label: "Revenue Split", href: "/revenue-split" },
-  { icon: Lock, label: "Vesting", href: "/vesting" },
+
   { icon: Store, label: "Marketplace", href: "/marketplace" },
   { icon: Gavel, label: "Auctions", href: "/auctions" },
-  { icon: Brain, label: "AI Tracking", href: "/ai-tracking" },
   { icon: CreditCard, label: "Payouts", href: "/payouts" },
   { icon: Activity, label: "Activity", href: "/activity" },
   { icon: Settings, label: "Settings", href: "/settings" },

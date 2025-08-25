@@ -9,7 +9,6 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Slider } from "@/components/ui/slider"
 import { Search, Filter, X } from "lucide-react"
 import { useState } from "react"
-
 export function MarketplaceFilters() {
   const [priceRange, setPriceRange] = useState([0, 10000])
   const [activeFilters, setActiveFilters] = useState<string[]>([])
@@ -22,8 +21,14 @@ export function MarketplaceFilters() {
     setPriceRange([0, 10000])
   }
 
+  
+
   return (
+
+
     <Card className="w-80">
+
+
       <CardHeader>
         <div className="flex items-center justify-between">
           <CardTitle className="flex items-center gap-2">
@@ -115,6 +120,10 @@ export function MarketplaceFilters() {
           </Select>
         </div>
       </CardContent>
+     
     </Card>
   )
 }
+
+
+

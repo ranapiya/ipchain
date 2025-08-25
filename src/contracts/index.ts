@@ -1,0 +1,5 @@
+export const marketplace = 'andr1008whrgym0h4kfcgj922kf0w8mwv0ru3cncsrpaylw97m74785eq72xff3'
+export const tokens='andr17n8jzsa50ulrfe8fpzh3hgmgcxw79cl9axqyn233lynd4rzuj69qudvhw7'
+export const nftauction='andr1rzcctqrnw5rjhr0n9a0h4j7w6vh7dh7me8qe9r7rcvneaxhltcystau9zc'
+export const auction='andr12xx5dn58ly3tamz8w5vpxvcp74mn0hsh5hcxydazk58rgygtyewq8hgl8m'
+export const exchange='andr1nrg8ww3mw03wrv9vww9dw0rsr909esnq7pjul7z2z3zd728xd40q0r4tzy'

@@ -12,3 +12,14 @@ const handler = (req: Request) =>
   });
 
 export { handler as GET, handler as POST };
+
+async function normalFunction  (){
+  
+  function1()  
+  function2() //  a
+  function5()  
+  await function3() // a        
+  fucntion4()
+  
+
+}

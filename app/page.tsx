@@ -4,6 +4,9 @@ import { Sidebar } from "@/components/layout/sidebar"
 import { StatsCards } from "@/components/dashboard/stats-cards"
 import { IPAssetsTable } from "@/components/dashboard/ip-assets-table"
 import { PositionsTable } from "@/components/dashboard/positions-table"
+import { InstantiateMsg ,ExecuteMsg} from "@/lib/andrjs/ados/cw721/Cw721ContractTs.types";
+import { instantiateContract,executeContract } from "@/lib/andrjs/functions";
+
 
 export default function Dashboard() {
   return (
@@ -27,6 +30,7 @@ export default function Dashboard() {
             <div className="grid gap-8 lg:grid-cols-2">
               <IPAssetsTable />
               <PositionsTable />
+              
             </div>
           </div>
         </main>

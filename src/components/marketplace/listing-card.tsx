@@ -62,15 +62,15 @@ export function ListingCard({
       <CardHeader className="p-0">
         <div className="relative">
           <img
-            src={image || "/placeholder.svg"}
-            alt={title}
-            className="w-full h-48 object-cover rounded-t-lg"
-            onError={(e) => {
-              e.currentTarget.src = `/placeholder.svg?height=192&width=300&query=${encodeURIComponent(
-                `${type} artwork for ${title}`,
-              )}`
-            }}
-          />
+  src={image || "/default-placeholder.png"} // use a real file inside /public
+  alt={title}
+  className="w-full h-48 object-cover rounded-t-lg"
+  onError={(e) => {
+    e.currentTarget.onerror = null // prevent infinite loop
+    e.currentTarget.src = "/default-placeholder.png"
+  }}
+/>
+
           <div className="absolute top-3 left-3 flex gap-2">
             {getStatusBadge()}
             {getAISignalBadge()}
