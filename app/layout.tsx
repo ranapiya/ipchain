@@ -25,7 +25,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "IPChain - Tokenize Your Intellectual Property",
+  title: "IPChain - On-Chain Royalty & Rights Management",
   description:
     "Professional IP tokenization and management platform on Andromeda blockchain",
 };
