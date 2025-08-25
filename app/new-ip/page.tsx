@@ -8,7 +8,7 @@ import { Step1Tokenization } from "@/components/wizard/step-1-tokenization"
 import { Step2Fractional } from "@/components/wizard/step-2-fractional"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import { Cw721ContractTsExecuteMsgBuilder } from "@/lib/andrjs/ados/cw721/Cw721ContractTs.message-builder"
+
 
 const wizardSteps = [
   { id: 1, title: "Tokenize", description: "CW721 NFT", completed: false, current: true },

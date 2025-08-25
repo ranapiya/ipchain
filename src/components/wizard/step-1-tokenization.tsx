@@ -6,9 +6,7 @@ import { Input } from "@/components/ui/input"
 import { createHash } from "crypto"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Badge } from "@/components/ui/badge"
-import { Plus, Trash2, Loader2, CheckCircle2, XCircle } from "lucide-react"
+import { Loader2, CheckCircle2, XCircle } from "lucide-react"
 import { useState } from "react"
 import { executeContract } from "@/lib/andrjs/functions"
 import useAndromedaClient from "@/lib/andrjs/hooks/useAndromedaClient"
@@ -24,8 +22,8 @@ export function Step1Tokenization() {
   const [description, setDescription] = useState("")
   const [videoUrl, setVideoUrl] = useState("")
   const [creators, setCreators] = useState<Creator[]>([{ address: "", percentage: 100 }])
-  const [territory, setTerritory] = useState("worldwide")
-  const [term, setTerm] = useState("perpetual")
+  const [territory] = useState("worldwide")
+  const [term] = useState("perpetual")
 
   const [nftDetails, setNftDetails] = useState<any>(null)
   const [mintStatus, setMintStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
@@ -137,7 +135,7 @@ export function Step1Tokenization() {
           <CardContent className="space-y-4">
             <div>
               <Label className="mb-3.5">Name</Label>
-              <Input placeholder="NFT Name" value={name} onChange={(e) => setName(e.target.value)} />
+              <Input placeholder="NFT Name" value={name} onChange={(e) => setName(e.target.value)} className=""/>
             </div>
             <div>
               <Label className="mb-3.5">Description</Label>
@@ -150,7 +148,7 @@ export function Step1Tokenization() {
             <div className="space-y-2 flex items-center">
               <Button 
                 onClick={createNft} 
-                className="flex-1 bg-primary hover:bg-primary/90 w-lg flex items-center justify-center cursor-pointer"
+                className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-12 py-4 text-lg font-semibold  shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105 w-lg flex items-center justify-center cursor-pointer"
                 disabled={mintStatus === "loading"}
               >
                 {mintStatus === "loading" ? (

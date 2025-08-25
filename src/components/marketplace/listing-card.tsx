@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Clock, Eye, Heart, TrendingUp } from "lucide-react"
 import Link from "next/link"
-
+import Image from "next/image"
 interface ListingCardProps {
   id: string
   title: string
@@ -61,14 +61,12 @@ export function ListingCard({
     <Card className="group hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
       <CardHeader className="p-0">
         <div className="relative">
-          <img
-  src={image || "/default-placeholder.png"} // use a real file inside /public
+          <Image
+  src={image || "/place.png"}
   alt={title}
+  width={400}   // 👈 set an actual width
+  height={192}  // 👈 set an actual height
   className="w-full h-48 object-cover rounded-t-lg"
-  onError={(e) => {
-    e.currentTarget.onerror = null // prevent infinite loop
-    e.currentTarget.src = "/default-placeholder.png"
-  }}
 />
 
           <div className="absolute top-3 left-3 flex gap-2">

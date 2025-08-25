@@ -126,7 +126,7 @@ export function Step2Fractional() {
   return (
     <div className="grid gap-6 lg:grid-cols-2">
       {/* Start Sale */}
-      <Card>
+      <Card >
         <CardHeader>
           <CardTitle>Start Token Sale</CardTitle>
           <CardDescription>Fractionalize your NFT by selling CW20 tokens</CardDescription>

@@ -5,12 +5,8 @@ import { Button } from "@/components/ui/button"
 import {
   LayoutDashboard,
   Plus,
-  Coins,
-  TrendingUp,
-  Lock,
   Store,
   Gavel,
-  Brain,
   CreditCard,
   Activity,
   Settings,
@@ -21,7 +17,6 @@ import { usePathname } from "next/navigation"
 const sidebarItems = [
   { icon: LayoutDashboard, label: "Dashboard", href: "/" },
   { icon: Plus, label: "New IP", href: "/new-ip" },
-
   { icon: Store, label: "Marketplace", href: "/marketplace" },
   { icon: Gavel, label: "Auctions", href: "/auctions" },
   { icon: CreditCard, label: "Payouts", href: "/payouts" },

@@ -40,7 +40,7 @@ const RootLayout = async (props: Props) => {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${manrope.variable}`}
+      className={`${geistSans.variable} ${geistMono.variable} ${manrope.variable} dark`}
     >
       <body className="antialiased">
         <Providers>

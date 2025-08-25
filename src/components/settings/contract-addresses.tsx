@@ -86,7 +86,8 @@ export function ContractAddresses() {
     <Card>
       <CardHeader>
         <CardTitle>Contract Addresses</CardTitle>
-        <CardDescription>Manage your project's smart contract addresses</CardDescription>
+       <CardDescription>Manage your project&apos;s smart contract addresses</CardDescription>
+
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
